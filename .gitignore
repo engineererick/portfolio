@@ -35,7 +35,7 @@ next-env.d.ts
 .idea/
 
 # Original assets (already in app/public/)
-images/
+/images/
 
 # Claude Code
 .claude/
