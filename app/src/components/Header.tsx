@@ -1,7 +1,7 @@
 "use client";
 
-import { Github, Linkedin, Instagram, MapPin, Sun, Moon } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Github, Linkedin, Instagram, MapPin, Sun, Moon, Share2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "./ThemeProvider";
 import { useTranslations, useLocale } from "next-intl";
@@ -24,6 +24,8 @@ const socialLinks = [
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [showSocials, setShowSocials] = useState(false);
+    const socialsRef = useRef<HTMLDivElement>(null);
     const { theme, toggleTheme } = useTheme();
     const t = useTranslations("header");
     const tAccessibility = useTranslations("accessibility");
@@ -38,6 +40,18 @@ export default function Header() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (socialsRef.current && !socialsRef.current.contains(e.target as Node)) {
+                setShowSocials(false);
+            }
+        };
+        if (showSocials) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [showSocials]);
 
     const switchLocale = (newLocale: string) => {
         // Replace the current locale in the pathname with the new locale
@@ -69,7 +83,7 @@ export default function Header() {
                 </a>
 
                 {/* Right Side: Location + Language + Theme + Socials */}
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3 md:gap-6">
                     {/* Location */}
                     <div className="hidden md:flex items-center gap-2 text-sm text-[var(--foreground-muted)]">
                         <MapPin size={14} className="text-[var(--accent-primary)]" />
@@ -77,10 +91,10 @@ export default function Header() {
                     </div>
 
                     {/* Language Switcher */}
-                    <div className="flex gap-1 p-1 rounded-full border border-[var(--border)] bg-[var(--background)]/50">
+                    <div className="flex gap-1 p-0.5 md:p-1 rounded-full border border-[var(--border)] bg-[var(--background)]/50">
                         <button
                             onClick={() => switchLocale("en")}
-                            className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                            className={`px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-medium transition-all ${
                                 locale === "en"
                                     ? "bg-[var(--accent-primary)] text-white"
                                     : "text-[var(--foreground-muted)] hover:text-[var(--accent-primary)]"
@@ -91,7 +105,7 @@ export default function Header() {
                         </button>
                         <button
                             onClick={() => switchLocale("es")}
-                            className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                            className={`px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-medium transition-all ${
                                 locale === "es"
                                     ? "bg-[var(--accent-primary)] text-white"
                                     : "text-[var(--foreground-muted)] hover:text-[var(--accent-primary)]"
@@ -105,14 +119,14 @@ export default function Header() {
                     {/* Theme Toggle */}
                     <button
                         onClick={toggleTheme}
-                        className="w-9 h-9 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--foreground-muted)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all"
+                        className="w-7 h-7 md:w-9 md:h-9 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--foreground-muted)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all"
                         aria-label={t("toggleTheme")}
                     >
                         {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
                     </button>
 
-                    {/* Social Links */}
-                    <div className="flex gap-3">
+                    {/* Social Links - Desktop */}
+                    <div className="hidden md:flex gap-3">
                         {socialLinks.map((link) => (
                             <a
                                 key={link.labelKey}
@@ -125,6 +139,37 @@ export default function Header() {
                                 <link.icon size={16} />
                             </a>
                         ))}
+                    </div>
+
+                    {/* Social Links - Mobile Dropdown */}
+                    <div className="relative md:hidden" ref={socialsRef}>
+                        <button
+                            onClick={() => setShowSocials(!showSocials)}
+                            className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ${
+                                showSocials
+                                    ? "border-[var(--accent-primary)] text-[var(--accent-primary)]"
+                                    : "border-[var(--border)] text-[var(--foreground-muted)]"
+                            }`}
+                            aria-label={t("socials")}
+                        >
+                            <Share2 size={14} />
+                        </button>
+                        {showSocials && (
+                            <div className="absolute right-0 top-full mt-2 flex gap-2 p-2 rounded-xl border border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-lg shadow-lg">
+                                {socialLinks.map((link) => (
+                                    <a
+                                        key={link.labelKey}
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-9 h-9 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--foreground-muted)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all"
+                                        aria-label={t(link.labelKey)}
+                                    >
+                                        <link.icon size={16} />
+                                    </a>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </nav>
