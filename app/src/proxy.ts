@@ -9,6 +9,9 @@ export const proxy = createMiddleware({
     // Used when no locale matches
     defaultLocale: "en",
 
+    // Ignore browser language, always default to EN
+    localeDetection: false,
+
     // Always use locale prefix (e.g., /en/about instead of /about for default)
     localePrefix: "always",
 });
