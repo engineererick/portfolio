@@ -1,0 +1,42 @@
+# Personal/sensitive data
+personal/
+
+# Environment variables
+.env*
+!.env.local.example
+
+# Dependencies
+node_modules/
+
+# Next.js
+app/.next/
+app/out/
+app/build/
+
+# Vercel
+.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+
+# Original assets (already in app/public/)
+images/
+
+# Claude Code
+.claude/
+CLAUDE.md
