@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Erick Galindo | Ingeniero de Software y Arquitecto Fintech",
+    "description": "Ingeniero de Software con más de 5 años de experiencia construyendo soluciones fintech escalables. Especializado en Next.js, integración de IA/LLM, scoring crediticio y sistemas bancarios."
+  },
+  "header": {
+    "location": "San Luis Potosí, México",
+    "toggleTheme": "Cambiar tema",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "x": "X"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Erick Galindo",
+    "tagline": "Ingeniero de Software y Arquitecto Fintech • +5 Años",
+    "description": "Construyendo soluciones fintech escalables con Next.js, integración de IA/LLM y arquitectura cloud moderna. Especializado en scoring crediticio, sistemas bancarios y aplicaciones empresariales.",
+    "cta": {
+      "contact": "Contactar",
+      "resume": "Ver CV"
+    },
+    "scroll": "Desplázate para explorar"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "titleHighlight": "y Experiencia",
+    "subtitle": "Tecnologías y herramientas que uso para construir aplicaciones web modernas",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloudData": "Cloud y Datos",
+      "fintechAI": "Fintech e IA"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "titleHighlight": "Destacados",
+    "subtitle": "Análisis profundo de sistemas complejos y arquitecturas que he construido",
+    "keyFeatures": "Características Clave",
+    "techStack": "Stack Tecnológico",
+    "metrics": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "components": "Componentes",
+      "endpoints": "Endpoints",
+      "modules": "Módulos"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "titleHighlight": "Profesional",
+    "subtitle": "Mi trayectoria construyendo soluciones fintech y empresariales",
+    "current": "Posición Actual",
+    "keyProjects": "Proyectos Clave",
+    "technologies": "Tecnologías"
+  },
+  "contact": {
+    "title": "Pongámonos en",
+    "titleHighlight": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres colaborar? ¡Hablemos!",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu.correo@ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o idea...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "¡Mensaje enviado con éxito!",
+      "description": "Gracias por contactarme. Te responderé pronto."
+    },
+    "error": {
+      "generic": "Algo salió mal. Por favor intenta de nuevo."
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "builtWith": "Construido con Next.js, TypeScript y Tailwind CSS"
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal",
+    "home": "Erick Galindo - Inicio",
+    "mainNavigation": "Navegacion principal",
+    "switchToEnglish": "Cambiar a ingles",
+    "switchToSpanish": "Cambiar a espanol"
+  }
+}

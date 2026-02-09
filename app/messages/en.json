@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Erick Galindo | Software Engineer & Fintech Architect",
+    "description": "Software Engineer with 5+ years of experience building scalable fintech solutions. Specialized in Next.js, AI/LLM integration, credit scoring, and banking systems."
+  },
+  "header": {
+    "location": "San Luis Potosí, México",
+    "toggleTheme": "Toggle theme",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "x": "X"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Erick Galindo",
+    "tagline": "Software Engineer & Fintech Architect • 5+ Years",
+    "description": "Building scalable fintech solutions with Next.js, AI/LLM integration, and modern cloud architecture. Specialized in credit scoring, banking systems, and enterprise applications.",
+    "cta": {
+      "contact": "Get in Touch",
+      "resume": "View Resume"
+    },
+    "scroll": "Scroll to explore"
+  },
+  "skills": {
+    "title": "Skills",
+    "titleHighlight": "& Expertise",
+    "subtitle": "Technologies and tools I use to build modern web applications",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloudData": "Cloud & Data",
+      "fintechAI": "Fintech & AI"
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "subtitle": "Deep dives into complex systems and architectures I've built",
+    "keyFeatures": "Key Features",
+    "techStack": "Tech Stack",
+    "metrics": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "components": "Components",
+      "endpoints": "Endpoints",
+      "modules": "Modules"
+    }
+  },
+  "experience": {
+    "title": "Professional",
+    "titleHighlight": "Experience",
+    "subtitle": "My journey building fintech and enterprise solutions",
+    "current": "Current Position",
+    "keyProjects": "Key Projects",
+    "technologies": "Technologies"
+  },
+  "contact": {
+    "title": "Let's",
+    "titleHighlight": "Connect",
+    "subtitle": "Have a project in mind or want to collaborate? Let's talk!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or idea...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Message sent successfully!",
+      "description": "Thanks for reaching out. I'll get back to you soon."
+    },
+    "error": {
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "builtWith": "Built with Next.js, TypeScript, and Tailwind CSS"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "home": "Erick Galindo - Home",
+    "mainNavigation": "Main navigation",
+    "switchToEnglish": "Switch to English",
+    "switchToSpanish": "Switch to Spanish"
+  }
+}
