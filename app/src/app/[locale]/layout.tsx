@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import StructuredData from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleTagManager, { GoogleTagManagerNoScript } from "@/components/GoogleAnalytics";
 import type { Metadata } from "next";
 import "../globals.css";
 
@@ -124,6 +124,7 @@ export default async function LocaleLayout({
                 <StructuredData locale={locale} />
             </head>
             <body>
+                <GoogleTagManagerNoScript />
                 <ThemeProvider>
                     <NextIntlClientProvider messages={messages}>
                         {children}
@@ -131,7 +132,7 @@ export default async function LocaleLayout({
                 </ThemeProvider>
                 <Analytics />
                 <SpeedInsights />
-                <GoogleAnalytics />
+                <GoogleTagManager />
             </body>
         </html>
     );
