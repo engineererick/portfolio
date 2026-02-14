@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Layers, FileCode } from "lucide-react";
+import { Code2, Layers, FileCode, ExternalLink } from "lucide-react";
 import { useScrollAnimationChildren } from "@/hooks/useScrollAnimation";
 import { useTranslations } from "next-intl";
 import type { PortfolioProject } from "@/lib/parsePortfolioFiles";
@@ -98,6 +98,24 @@ export default function FeaturedProjectsSection({ projects }: FeaturedProjectsSe
                                         ))}
                                 </div>
                             </div>
+
+                            {/* Links */}
+                            {project.links && project.links.length > 0 && (
+                                <div className="mt-6 flex flex-wrap gap-3">
+                                    {project.links.map((link) => (
+                                        <a
+                                            key={link.url}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-sm text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] transition-colors"
+                                        >
+                                            <ExternalLink size={14} />
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
                         </article>
                     ))}
                 </div>

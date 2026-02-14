@@ -129,7 +129,7 @@ export function parseSkillFiles(locale: string = "en"): ExperienceData[] {
                 kalapata: ["React", "Node.js", "AWS", "MongoDB", "Google Maps API"],
                 superior: ["React", "Node.js", "MongoDB"],
                 coronado: [".NET WPF", ".NET Core", "SQL Server", "SAP B1"],
-                freelance: [".NET Framework", "Elasticsearch", "Next.js", "Node.js"],
+                freelance: [".NET Framework", "Elasticsearch", "Next.js", "Node.js", "TypeScript"],
             };
 
             experiences.push({
